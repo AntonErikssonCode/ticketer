@@ -1,0 +1,47 @@
+.project-card {
+  width: 22%;
+  height: calc(200px -1rem);
+  background-color: var(--color-background-light);
+  border-radius: 5px;
+  box-sizing: 4px 4px 4px black;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  padding: 0.5rem;
+}
+.project-card-top {
+  display: flex;
+  justify-content: space-between;
+}
+.project-card-top-title {
+}
+.project-card-top-priority {
+  border-radius: 2px;
+  background-color: rgb(88, 191, 92);
+  color: black;
+  padding: 0.1rem 0.4rem;
+}
+
+.project-card-tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+ 
+}
+.project-card-tasks h3{
+  font-weight: 100;
+}
+.project-card-progress {
+  height: 6px;
+  background-color: rgb(24, 24, 24);
+  border-radius: 2px;
+  position: relative;
+  width: 100%;
+}
+.project-card-progress-bar {
+  height: 6px;
+  background-color: rgb(42, 165, 85);
+  border-radius: 2px;
+  position: absolute;
+  width: 60%;
+}

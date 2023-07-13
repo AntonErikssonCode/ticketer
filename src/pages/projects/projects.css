@@ -1,0 +1,36 @@
+.bar {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+  align-items: center;
+  
+}
+.bar-add {
+  height: auto;
+  width: 5%;
+  min-width: 50px;
+  margin: auto;
+  margin-left: 0;
+  font-weight: 100;
+  font-size: 2rem;
+  background-color: var(--color-accent2);
+  border-radius: 5px;
+  border: 0;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  cursor: pointer;
+}
+.bar-add:hover{
+  scale: 1.02;
+  background-color: var(--color-accent2-light);
+
+
+}
+.project-container{
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: flex-start;
+  
+}

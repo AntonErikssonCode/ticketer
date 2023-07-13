@@ -1,0 +1,58 @@
+.slider{
+  height: 100%;
+  
+  background-color: var( --color-accent2-dark);
+  width: 220px;
+  border-radius: 5px;
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+}
+.slider-bar{
+  background-color: var( --color-accent2);
+  height: 100%;
+  padding: 0.2rem;
+  transition: all 0.3s ease-in-out;
+  width: 110px;
+  border-radius: 5px;
+  z-index: 500;
+  position: relative; /* Add this line */
+
+
+}
+.slider-bar:hover{
+  scale: 1.02;
+  background-color: var(--color-accent2-light);
+  
+
+}
+
+
+.slider-active{
+  transform: translateX(110px);
+}
+.slider-label-1{
+  color: white;
+  height: 100%;
+  width: 110px;
+  top: 0;
+  position: absolute;
+  padding: 0;
+  z-index: 1;
+  font-weight: 100;
+
+}
+.slider-label-2{
+  color: white;
+  
+  height: 100%;
+  width: 110px;
+  left: 110px;
+  top: 0;
+  padding: 0;
+  z-index: 1;
+  font-weight: 100;
+
+ 
+  position: absolute;
+}
