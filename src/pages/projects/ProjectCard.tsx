@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./projectCard.css";
 import Priority from "../../basicComponents/Priority";
@@ -23,6 +23,34 @@ function ProjectCard({
     navigate(`/board/${index}`);
   };
   const { data, handleSetData } = useContext(AppContext);
+  const [barColor, setBar] = useState("var(--color-red)");
+  const [percentDoneTickets, setPercentDoneTickets] = useState(0);
+
+  useEffect(() => {
+    const totalNumberOfTickets =
+      data.projects[index - 1].notStarted.length +
+      data.projects[index - 1].inProgress.length +
+      data.projects[index - 1].isDone.length;
+  
+    const doneTickets = data.projects[index - 1].isDone.length;
+    const doneTicketsInPercent = (doneTickets / totalNumberOfTickets) * 100;
+    console.log(doneTicketsInPercent)
+    if (doneTicketsInPercent <= 30) {
+      setBar("var(--color-red)");
+      console.log("red")
+    } else if (doneTicketsInPercent > 30 && doneTicketsInPercent <= 70) {
+      setBar("var(--color-yellow)");
+      console.log("yellow")
+
+    } else {
+      setBar("var(--color-green)");
+      console.log("green")
+
+    }
+    setPercentDoneTickets(doneTicketsInPercent);
+  }, [data, index]);
+  
+
 
   return (
     <div onClick={handleNavigateToBoard} className="project-card">
@@ -31,12 +59,17 @@ function ProjectCard({
         <Priority priority={priority} />
       </div>
       <div className="project-card-tasks">
-        {data.projects[index - 1].inProgress?.map((item:any, index: number) => {
-          return <h3 key={"projekt-tasks" + index}>{item.name} </h3>;
-        })}
+        {data.projects[index - 1].inProgress?.map(
+          (item: any, index: number) => {
+            return <h3 key={"projekt-tasks" + index}>{item.name} </h3>;
+          }
+        )}
       </div>
       <div className="project-card-progress">
-        <div className="project-card-progress-bar"></div>
+        <div
+          className="project-card-progress-bar"
+          style={{ width: percentDoneTickets + "%", background: barColor }}
+        ></div>
       </div>
     </div>
   );

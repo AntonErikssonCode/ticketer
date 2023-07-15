@@ -25,6 +25,7 @@ function Projects({}) {
         {data.projects.map((project: any, index: number) => {
           return (
             <ProjectCard
+            key={"porjects" + index}
               title={project.name}
               priority={project.priority}
               index={index+1}

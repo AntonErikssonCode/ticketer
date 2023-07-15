@@ -5,7 +5,7 @@ const emptyTemplate = {
       priority: "low",
       notStarted: [{ name: "kick ass" }, { name: "kick ass" }],
       inProgress: [{ name: "kick ass" }, { name: "kick ass" }],
-      isDone: [{ name: "kick ass" }, { name: "kick ass" }],
+      isDone: [{ name: "kick ass" }],
     },
     {
       name: "Idle Game",
@@ -23,7 +23,7 @@ const emptyTemplate = {
       priority: "high",
       notStarted: [{ name: "kick ass" }, { name: "kick ass" }],
       inProgress: [{ name: "kick ass" }, { name: "kick ass" }],
-      isDone: [],
+      isDone: [{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" },{ name: "kick ass" }, { name: "kick ass" }],
     },
   ],
 };

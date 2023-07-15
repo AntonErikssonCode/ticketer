@@ -3,14 +3,14 @@
   color: black;
   padding: 0.1rem 0.4rem;
   text-transform: capitalize;
+  max-height: 24px;
 }
-
 .priority-low {
-  background-color: rgb(88, 191, 92);
+  background-color: var(--color-green);
 }
 .priority-moderate {
-  background-color: rgb(191, 170, 88);
+  background-color: var(--color-yellow);
 }
 .priority-high {
-  background-color: rgb(191, 112, 88);
+  background-color:var(--color-red);
 }
