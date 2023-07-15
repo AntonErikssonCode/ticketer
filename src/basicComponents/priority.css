@@ -1,0 +1,16 @@
+.priority {
+  border-radius: 2px;
+  color: black;
+  padding: 0.1rem 0.4rem;
+  text-transform: capitalize;
+}
+
+.priority-low {
+  background-color: rgb(88, 191, 92);
+}
+.priority-moderate {
+  background-color: rgb(191, 170, 88);
+}
+.priority-high {
+  background-color: rgb(191, 112, 88);
+}
