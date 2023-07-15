@@ -15,7 +15,6 @@ const emptyTemplate = {
         { name: "kick ass" },
         { name: "kick ass" },
         { name: "kick ass" },
-      
       ],
       isDone: [{ name: "kick ass" }, { name: "kick ass" }],
     },
@@ -28,4 +27,12 @@ const emptyTemplate = {
     },
   ],
 };
-export default emptyTemplate;
+const emptyProject = {
+  name: "Empty",
+  priority: "low",
+  notStarted: [],
+  inProgress: [],
+  isDone: [],
+};
+
+export { emptyTemplate, emptyProject };

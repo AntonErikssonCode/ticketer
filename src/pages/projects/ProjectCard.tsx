@@ -31,7 +31,7 @@ function ProjectCard({
         <Priority priority={priority} />
       </div>
       <div className="project-card-tasks">
-        {data.projects[index - 1].inProgress?.map((item, index) => {
+        {data.projects[index - 1].inProgress?.map((item:any, index: number) => {
           return <h3 key={"projekt-tasks" + index}>{item.name} </h3>;
         })}
       </div>

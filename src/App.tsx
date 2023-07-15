@@ -9,7 +9,7 @@ import Projects from "./pages/projects/Projects";
 import Board from "./pages/board/Board";
 import Layout from "./basicComponents/Layout";
 import { AppContext } from "./Context";
-import emptyTemplate from "./config/defaultTemplate";
+import {emptyTemplate} from "./config/defaultTemplate";
 
 function App() {
   const [data, setData] = useState(emptyTemplate);
@@ -17,9 +17,16 @@ function App() {
   function handleSetData(data:any) {
     setData(data);
   }
+  function addProject(newProject:any) {
+    setData(prevData => {
+      const updatedProjects = [...prevData.projects, newProject];
+      return { ...prevData, projects: updatedProjects };
+    });
+  }
 
+  
   return (
-    <AppContext.Provider value={{ data, handleSetData }}>
+    <AppContext.Provider value={{ data, handleSetData, addProject }}>
       <Layout>
         <Router>
           <Routes>
