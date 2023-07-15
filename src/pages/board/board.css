@@ -1,0 +1,24 @@
+.board-container {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.board-section {
+  width: 32%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+/*   background-color: var(--color-background-light);
+ */}
+ .project-input-name {
+  border: none;
+  background-color: transparent;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  padding: 0;
+  margin: 0;
+  display: inline;
+  outline: none;
+}

@@ -28,7 +28,7 @@ function Projects({}) {
             key={"porjects" + index}
               title={project.name}
               priority={project.priority}
-              index={index+1}
+              index={index}
             />
           );
         })}

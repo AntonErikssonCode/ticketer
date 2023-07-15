@@ -24,15 +24,24 @@ function App() {
     });
   }
 
+  function renameProject(newName: string, index: number) {
+    setData((prevData) => {
+      const updatedProjects = [...prevData.projects];
+      updatedProjects[index].name = newName;
+      return { ...prevData, projects: updatedProjects };
+    });
+  }
+  
+
   
   return (
-    <AppContext.Provider value={{ data, handleSetData, addProject }}>
+    <AppContext.Provider value={{ data, handleSetData, addProject, renameProject }}>
       <Layout>
         <Router>
           <Routes>
             <Route path="/" element={<Projects />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/board" element={<Navigate to="/board/1" />} />
+            <Route path="/board" element={<Navigate to="/board/0" />} />
             <Route path="/board/:boardId" element={<Board />} />
           </Routes>
         </Router>
