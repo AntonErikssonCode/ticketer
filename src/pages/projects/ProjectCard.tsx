@@ -52,6 +52,10 @@ function ProjectCard({
       </div>
       <div className="project-card-tasks">
         {data.projects[index].inProgress?.map((item: any, index: number) => {
+          if (index === 3)
+            return <h3 key={"projekt-tasks" + index}> . . . . . </h3>;
+          if (index > 3) return null;
+
           return <h3 key={"projekt-tasks" + index}>{item.name} </h3>;
         })}
       </div>

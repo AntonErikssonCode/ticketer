@@ -6,4 +6,7 @@ export const AppContext = createContext({
   handleSetData: (data: any) => {},
   addProject: (newProject: any) => {},
   renameProject: (newName: string, index: number) => {},
+  removeProject: (index: number) => {},
+  addTicket: (newTicket: any, projectIndex: number, type: string) => {},
+  deleteTicket: (projectIndex: number, type: string, ticketIndex: number) => {},
 });

@@ -5,7 +5,6 @@ import Slider from "../../basicComponents/Slider";
 import ProjectCard from "./ProjectCard";
 import { AppContext } from "../../Context";
 import { emptyProject } from "../../config/defaultTemplate";
-
 function Projects({}) {
   const {data, handleSetData, addProject} = useContext(AppContext);
 
