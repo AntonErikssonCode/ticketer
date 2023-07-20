@@ -18,3 +18,8 @@
   text-transform: capitalize;
   gap: 1rem;
 }
+
+.ticket-container h2{
+  margin-right: auto;
+}
+
