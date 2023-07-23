@@ -37,6 +37,9 @@ function Board() {
     removeProject(parseInt(boardId));
     navigate(`/projects`);
   }
+  function navigateToProjects() {
+    navigate(`/projects`);
+  }
 
   function addNotStartedTicket() {
     if (!boardId) return;
@@ -123,8 +126,8 @@ function Board() {
           })}
         </div>
       </div>
-      <button>
-        <h3>Back</h3>
+      <button onClick={navigateToProjects} className="back-button">
+       Back
       </button>
     </BasicContainer>
   );

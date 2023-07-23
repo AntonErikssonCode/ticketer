@@ -17,7 +17,7 @@ function Ticket({ ticket, index, type, projectIndex }: TicketProps) {
   return (
     <div className="ticket-container">
       <h2>{ticket.name}</h2>
-      <button onClick={handleDeleteTicket}>Delete</button>
+      <button onClick={handleDeleteTicket} className="ticket-delete-button">X</button>
       <Priority priority={ticket.priority} />
     </div>
   );

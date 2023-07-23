@@ -17,7 +17,7 @@
   font-weight: 100;
   font-size: 1.2rem;
   padding: 0.2rem 0.6rem;
-  background-color: rgb(191, 112, 88);
+  background-color: rgb(252, 102, 102);
   border-radius: 2px;
   border: 0;
   color: #fff;
@@ -63,4 +63,23 @@ width: 100%;
   margin: 0;
   display: inline;
   outline: none;
+}
+
+.back-button{
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  height: auto;
+
+  min-width: 50px;
+  margin: auto;
+  margin-left: 0;
+  font-weight: 100;
+  font-size: 1.6rem;
+  background-color: var(--color-accent2);
+  border-radius: 5px;
+  border: 0;
+  transition: all 0.3s ease-in-out;
+  color: white;
+  cursor: pointer;
 }
